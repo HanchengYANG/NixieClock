@@ -38,7 +38,6 @@
 #include "MK64F12.h"
 
 #include "Common.h"
-#include "I2C/HAL/I2C_HAL.h"
 
 /*
  * @brief   Application entry point.
