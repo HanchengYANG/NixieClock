@@ -25,9 +25,6 @@ static volatile bool I2C_CompleteFlag = false;
 #ifdef I2C_WITH_RTOS
 static volatile bool I2C_InUse = false;
 #endif
-//static uint8_t I2C_Status;
-//static status_t I2C_Result = kStatus_Success;
-//static uint8_t I2C_TxBuff[I2C_TX_BUFFER_SIZE];
 static i2c_master_transfer_t I2C_MasterXfer = {
 		.subaddress = 0,
 		.subaddressSize = 0,

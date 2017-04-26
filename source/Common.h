@@ -10,6 +10,7 @@
 
 #include "fsl_common.h"
 #include "I2C/DS3231/DS3231.h"
+#include "Misc/Misc.h"
 
 /*********             Public macro             *********/
 #define			BIT0			0x01

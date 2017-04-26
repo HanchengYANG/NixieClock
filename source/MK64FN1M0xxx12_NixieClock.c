@@ -38,7 +38,6 @@
 #include "MK64F12.h"
 
 #include "Common.h"
-#include "I2C/HAL/I2C_HAL.h"
 
 /*
  * @brief   Application entry point.
@@ -49,24 +48,6 @@ int main(void) {
     BOARD_InitBootClocks();
   	/* Init FSL debug console. */
     BOARD_InitDEBUG_UART();
-	DS_Init();
-	static DS_DataStruct data = {
-			.sec = 0,
-			.min = 44,
-			.hour = 11,
-			.day = 6,
-			.date = 22,
-			.month = 4,
-			.year = 2017
-	};
-	static bool setTime = false;
-	if(setTime) {
-		DS_Set(0xff, &data);
-	}
-	while(1) {
-		DS_Get(&data);
-		printf("hello");
-	}
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
     /* Enter an infinite loop, just incrementing a counter. */
