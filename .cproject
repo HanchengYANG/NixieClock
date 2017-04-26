@@ -67,7 +67,7 @@
 								<option id="gnu.c.compiler.option.preprocessor.preprocess.2008620409" name="Preprocess only (-E)" superClass="gnu.c.compiler.option.preprocessor.preprocess" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2003692749" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="CR_INTEGER_PRINTF"/>
-									<listOptionValue builtIn="false" value="SDK_DEBUGCONSOLE=0"/>
+									<listOptionValue builtIn="false" value="SDK_DEBUGCONSOLE=1"/>
 									<listOptionValue builtIn="false" value="__MCUXPRESSO"/>
 									<listOptionValue builtIn="false" value="__USE_CMSIS"/>
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -314,7 +314,7 @@
 								<option id="gnu.c.compiler.option.preprocessor.preprocess.281053649" name="Preprocess only (-E)" superClass="gnu.c.compiler.option.preprocessor.preprocess"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.551923160" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="CR_INTEGER_PRINTF"/>
-									<listOptionValue builtIn="false" value="SDK_DEBUGCONSOLE=0"/>
+									<listOptionValue builtIn="false" value="SDK_DEBUGCONSOLE=1"/>
 									<listOptionValue builtIn="false" value="__MCUXPRESSO"/>
 									<listOptionValue builtIn="false" value="__USE_CMSIS"/>
 									<listOptionValue builtIn="false" value="NDEBUG"/>

@@ -49,23 +49,22 @@ int main(void) {
     BOARD_InitBootClocks();
   	/* Init FSL debug console. */
     BOARD_InitDEBUG_UART();
+    DbgConsole_Init((uint32_t)UART0, 115200, DEBUG_CONSOLE_DEVICE_TYPE_UART, CLOCK_GetCoreSysClkFreq());
 	DS_Init();
-	static DS_DataStruct data = {
-			.sec = 0,
-			.min = 44,
-			.hour = 11,
-			.day = 6,
-			.date = 22,
-			.month = 4,
-			.year = 2017
-	};
-	static bool setTime = false;
-	if(setTime) {
-		DS_Set(0xff, &data);
-	}
+	static DS_DataStruct data;
+	static uint8_t month[12][4] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+			"Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+	static uint8_t day[7][4] =
+			{ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+	volatile static uint64_t delayCounter = 0;
+	static uint64_t delayConstant = 4430000;
 	while(1) {
 		DS_Get(&data);
-		printf("hello");
+		PRINTF("%02d:%02d:%02d, %s, %s %d, %d \t\r", data.hour, data.min, data.sec,
+				day[data.day - 1], month[data.month - 1], data.date, data.year);
+		for (delayCounter = 0; delayCounter < delayConstant; delayCounter++) {
+			__NOP();
+		}
 	}
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;

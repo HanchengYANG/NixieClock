@@ -9,6 +9,7 @@
 #define COMMON_H_
 
 #include "fsl_common.h"
+#include <fsl_debug_console.h>
 #include "I2C/DS3231/DS3231.h"
 
 /*********             Public macro             *********/
